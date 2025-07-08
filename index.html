@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dino Multiplayer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="start-screen">
+    <h1>Dino Multiplayer</h1>
+    <input type="text" id="username" placeholder="Enter Your Name">
+    <button id="join-btn" onclick="registerPlayer()">Join Game</button>
+    <div id="host-controls" style="display: none;">
+      <p>You're the host!</p>
+      <button id="start-game-btn" onclick="startGameForEveryone()">Start Game</button>
+    </div>
+    <p id="waiting-text">Waiting for game to start...</p>
+  </div>
+
+  <div class="game" id="game" style="display: none;">
+    <div id="ground"></div>
+    <div id="players"></div>
+    <div id="scoreboard"></div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
